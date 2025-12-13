@@ -111,8 +111,6 @@ const identityOnLeft = () => {
   identityIndex = placeItems(identityIndex, images, '.indentity__card')
 }
 
-identityOnRight()
-
 document.addEventListener('DOMContentLoaded', (event) => {
   gsap.registerPlugin(SplitText)
   gsap.registerPlugin(ScrollTrigger)
@@ -163,6 +161,9 @@ cascadeAnimation(
 cascadeAnimation(
   {
     trigger: '.indentity',
+    onEnter: () => {
+      placeItems(identityIndex, images, '.indentity__card')
+    },
   },
   ['.indentity__titles__container', '.indentity__carrousel__container'],
   [{ y: -200 }, { scale: 0.2 }],
@@ -243,8 +244,8 @@ slides.forEach(
     gsap.to(video, {
       scrollTrigger: {
         trigger: video,
-        markers: true,
-        start: 'top bottom-=100',
+        // markers: true,
+        start: 'top bottom-=200',
         end: 'bottom top+=100',
         onEnter: () => {
           if (i === currentIndex) {
