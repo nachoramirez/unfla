@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+
+    <title>Un fla'</title>
+    <link rel="shortcut icon" href="images/image.png" type="image/x-png" />
+  </head>
+  <body>
+    <div class="background-container"></div>
+    <section class="presentation">
+      <video autoplay muted playsinline>
+        <source src="./videos/intro.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <header>
+      <img src="./images/logo.svg" alt="logo" />
+      <div>
+        <a href="#welcome">Conocenos</a>
+        <a href="#scroller">Servicios</a>
+        <a href="#wall-e">Proyectos</a>
+      </div>
+      <article></article>
+    </header>
+    <main>
+      <section class="welcome">
+        <h1>NOS METEMOS</h1>
+        <h1>DONDE NADIE SE ANIMA</h1>
+        <h3>
+          Buscando lo que sorprende lo que descoloca, lo que hace flashear
+        </h3>
+        <a href="#scroller">
+          <button>Y vos, ¿Te animas?</button>
+        </a>
+      </section>
+      <section id="scroller" class="scroller__container">
+        <div class="scroller">
+          <div class="participantes__background__container">
+            <article class="participantes__background">
+              <div class="participantes__background__title-container">
+                <h4 class="participantes__background__title">
+                  Todo esto lo hicimos
+                </h4>
+                <h4 class="participantes__background__title color">
+                  entre cinco.
+                </h4>
+              </div>
+            </article>
+          </div>
+          <div class="scroller__content">
+            <aside>
+              <div class="card recorte">
+                <img src="./cards/Sina_imgCard.png" class="card__image" />
+                <div class="card__section">
+                  <h4 class="card__title">Emiliano zampala</h4>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus ac egestas metus, quis fermentum leo. Praesent
+                    malesuada felis at leo faucibus tincidunt. Proin ut arcu vel
+                    nisl dictum fringilla.
+                  </p>
+                </div>
+              </div>
+            </aside>
+            <aside>
+              <div class="card recorte2">
+                <img src="./cards/Emi_imgCard.png" class="card__image" />
+                <div class="card__section">
+                  <h4 class="card__title">Emiliano zampala</h4>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus ac egestas metus, quis fermentum leo. Praesent
+                    malesuada felis at leo faucibus tincidunt. Proin ut arcu vel
+                    nisl dictum fringilla.
+                  </p>
+                </div>
+              </div>
+            </aside>
+            <aside>
+              <div class="card recorte3">
+                <img src="./cards/Feli_imgCard.png" class="card__image" />
+                <div class="card__section">
+                  <h4 class="card__title">Emiliano zampala</h4>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus ac egestas metus, quis fermentum leo. Praesent
+                    malesuada felis at leo faucibus tincidunt. Proin ut arcu vel
+                    nisl dictum fringilla.
+                  </p>
+                </div>
+              </div>
+            </aside>
+            <aside>
+              <div class="card recorte4">
+                <img src="./cards/Viole_imgCard.png" class="card__image" />
+                <div class="card__section">
+                  <h4 class="card__title">Emiliano zampala</h4>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus ac egestas metus, quis fermentum leo. Praesent
+                    malesuada felis at leo faucibus tincidunt. Proin ut arcu vel
+                    nisl dictum fringilla.
+                  </p>
+                </div>
+              </div>
+            </aside>
+            <aside>
+              <div class="card recorte5">
+                <img src="./cards/Toto_imgCard.png" class="card__image" />
+                <div class="card__section">
+                  <h4 class="card__title">Emiliano zampala</h4>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus ac egestas metus, quis fermentum leo. Praesent
+                    malesuada felis at leo faucibus tincidunt. Proin ut arcu vel
+                    nisl dictum fringilla.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="invitado">
+        <h4 class="invitado__texto">
+          Bueno, en realidad <span class="color">entre 6...</span>
+        </h4>
+        <div class="card invitado__card">
+          <img src="./cards/chadgpt.png" class="card__image" />
+          <div class="card__section">
+            <h4 class="card__title">CHAT GPT</h4>
+            <h5 class="card__text invitado__sub">
+              Asistente creativo, guionista, terapeuta ocasional.
+            </h5>
+            <p class="card__text">
+              Se encargó de los guiones, ideas, textos, estructura, dudas
+              existenciales, motivación, contención emocional y de recordarnos
+              dónde guardamos los archivos. Básicamente... de todo.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="skills">
+        <div class="skills__container first">
+          <div class="skills_titles__details">
+            <img
+              class="skills_titles__details_logo"
+              src="./images/isoLogo.svg"
+              alt="un fla' logo"
+            />
+            <p>Todo lo que sabemos hacer bien</p>
+          </div>
+          <h4 class="skills__titles__text">
+            No hacemos lo que <span class="color"> ya está hecho</span>: le
+            metemos cabeza, diseño y movimiento a marcas, webs y piezas que
+            <span class="color"> se animan </span>
+            a decir algo y no se conforman con lo seguro.
+          </h4>
+        </div>
+        <div class="skills__container second">
+          <div class="skills__buttons">
+            <p>Preferimos meterle cabeza a repetir lo que ya funciona.</p>
+            <div class="buttons__container">
+              <button onclick="toLeft()">
+                <img src="./utils/leftArrow.svg" alt="left" />
+              </button>
+              <button onclick="toRight()">
+                <img src="./utils/rightArrow.svg" alt="right" />
+              </button>
+            </div>
+          </div>
+          <div class="skills__cards__container">
+            <div class="skills__cards_carrousel">
+              <div class="skills__cards">
+                <h5 class="skills__cards__number">01</h5>
+                <h6 class="skills__cards__title">MOTION DESIGN</h6>
+                <p class="skills__cards__text">
+                  Hacemos que los conceptos respiren. Animamos con intención,
+                  ritmo y sentido para que todo tenga pulso.
+                </p>
+              </div>
+              <div class="skills__cards">
+                <h5 class="skills__cards__number">02</h5>
+                <h6 class="skills__cards__title">DISEÑO WEB</h6>
+                <p class="skills__cards__text">
+                  Diseñamos webs que no repiten fórmulas. Claras, pensadas, y
+                  con identidad propia desde el código hasta el color.
+                </p>
+              </div>
+              <div class="skills__cards">
+                <h5 class="skills__cards__number">03</h5>
+                <h6 class="skills__cards__title">BRANDING</h6>
+                <p class="skills__cards__text">
+                  Creamos marcas con voz, forma, actitud y contexto.Que se vean,
+                  se sientan y sobre todo, se recuerden.
+                </p>
+              </div>
+              <div class="skills__cards">
+                <h5 class="skills__cards__number">04</h5>
+                <h6 class="skills__cards__title">ANIMACIÓN 3D</h6>
+                <p class="skills__cards__text">
+                  Damos volumen a lo que no existe. Modelamos, texturizamos y
+                  animamos ideas que no piden permiso.
+                </p>
+              </div>
+              <div class="skills__cards">
+                <h5 class="skills__cards__number">05</h5>
+                <h6 class="skills__cards__title">EDICIÓN DE VIDEO</h6>
+                <p class="skills__cards__text">
+                  Editamos para contar, no solo cortar. Sabemos cuándo acelerar,
+                  cuándo pausar, cuándo romper y cuándo dejar espacio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="indentity">
+        <div class="indentity__titles__container">
+          <h4>
+            Identidad visual, ilustraciones y montajes que no se quedan en lo
+            básico
+          </h4>
+          <h5>Todo esto arranca con una idea, pero no termina ahí.</h5>
+        </div>
+        <div class="indentity__carrousel__container">
+          <button class="indentity__button" onclick="identityOnLeft()">
+            <img src="./utils/leftArrow.svg" alt="left arrow" />
+          </button>
+          <button
+            class="indentity__button right__button"
+            onclick="identityOnRight()"
+          >
+            <img src="./utils/rightArrow.svg" alt="right arrow" />
+          </button>
+          <div class="indentity__carrousel">
+            <div class="indentity__card" id="principalCard">
+              <div class="indentity__card__glitch__container">
+                <img
+                  class="indentity__card__img"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+              </div>
+            </div>
+            <div class="indentity__card">
+              <div class="indentity__card__glitch__container">
+                <img
+                  class="indentity__card__img"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+              </div>
+            </div>
+            <div class="indentity__card">
+              <div class="indentity__card__glitch__container">
+                <img
+                  class="indentity__card__img"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+                <img
+                  class="indentity__card__image__glitch"
+                  src="./tlou.jpg"
+                  alt="the last of us"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="indentity__glitch__p">
+          Pasa el mouse por encima de los trabajos que costo hacer el efecto del
+          glitch...
+        </p>
+      </section>
+      <section class="graphics">
+        <div class="graphics__titles">
+          <h4 class="graphics__title">
+            Motion graphics hechos para sentirse, no solo verse
+          </h4>
+          <div class="buttons__container">
+            <button id="graphics-left">
+              <img src="./utils/leftArrow.svg" alt="left" />
+            </button>
+            <button id="graphics-right">
+              <img src="./utils/rightArrow.svg" alt="right" />
+            </button>
+          </div>
+        </div>
+        <h5 class="graphics__titles__subtitle">
+          Si se mueve, que sea por algo. Y si no tiene algo para decir, mejor
+          que no se mueva.
+        </h5>
+        <div class="graphics__carrousel__container">
+          s
+          <div class="graphics__carrousel">
+            <div class="graphics__carrousel__card higher">
+              <div class="graphics__carrousel__card__content">
+                <video
+                  allow="autoplay"
+                  autoplay
+                  loop
+                  muted
+                  controls
+                  class="motions"
+                >
+                  <source src="./videos/motions/Adobe.webm" type="video/webm" />
+                </video>
+              </div>
+            </div>
+            <div class="graphics__carrousel__card">
+              <div class="graphics__carrousel__card__content">
+                <video controls loop class="motions">
+                  <source src="./videos/motions/Auto.webm" type="video/webm" />
+                </video>
+              </div>
+            </div>
+            <div class="graphics__carrousel__card">
+              <div class="graphics__carrousel__card__content">
+                <video controls loop class="motions">
+                  <source src="./videos/motions/Fanta.webm" type="video/webm" />
+                </video>
+              </div>
+            </div>
+            <div class="graphics__carrousel__card">
+              <div class="graphics__carrousel__card__content">
+                <video controls loop class="motions">
+                  <source
+                    src="./videos/motions/Spotify.webm"
+                    type="video/webm"
+                  />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="models3d">
+        <h4 class="model3d__title">Modelamos en 3D lo que imaginamos</h4>
+        <h5 class="model3d__subtitle">
+          No hacemos 3D para mostrar objetos. Lo hacemos para que la idea tenga
+          peso, forma y presencia.
+        </h5>
+        <div class="model3d__container">
+          <div class="model3d" id="model1">
+            <video autoplay muted playsinline loop class="model3d__video">
+              <source src="./videos/3d/WallE-3D.webm" type="video/webm" />
+            </video>
+            <h5 class="model3d__name">wall-e</h5>
+          </div>
+        </div>
+        <div class="model3d__container">
+          <div class="model3d" id="model2">
+            <video autoplay muted playsinline loop class="model3d__video">
+              <source src="./videos/3d/Tri-3D.webm" type="video/webm" />
+            </video>
+            <h5 class="model3d__name">Tri</h5>
+          </div>
+        </div>
+        <div class="model3d__container">
+          <div class="model3d" id="model3">
+            <video autoplay muted playsinline loop class="model3d__video">
+              <source src="./videos/3d/D.V.A-3D.webm" type="video/webm" />
+            </video>
+            <h5 class="model3d__name">D.V.A</h5>
+          </div>
+        </div>
+        <div class="model3d__container">
+          <div class="model3d" id="model4">
+            <video autoplay muted playsinline loop class="model3d__video">
+              <source src="./videos/3d/Teclado-3D.webm" type="video/webm" />
+            </video>
+            <h5 class="model3d__name">Teclado</h5>
+          </div>
+        </div>
+      </section>
+      <section class="extras">
+        <div class="extras__background"></div>
+        <h4 class="extras__title">
+          Sitios que <span class="extra"> se animan </span> a algo más
+        </h4>
+        <div class="extras__cards__container">
+          <div class="extras__card">
+            <img src="/images/corpo.webp" />
+            <h5>Web corporativa</h5>
+            <p>
+              Sitio institucional para un restaurante BBQ, con estética sobria y
+              contundente. Diseño claro, navegación rápida y foco en lo
+              importante: buena comida y buena atención. Perfecta para conocer
+              el lugar antes de probarlo.
+            </p>
+            <a href="">
+              <button>Ver sitio</button>
+            </a>
+          </div>
+          <div class="extras__card">
+            <img src="/images/landing.webp" />
+            <h5>Landing</h5>
+            <p>
+              Sitio one-page para un restaurante BBQ con estética limpia y
+              directa. Diseño pensado para abrir el apetito desde el primer
+              scroll: colores intensos, tipografía fuerte y navegación clara
+              para destacar menús, horarios y reservas
+            </p>
+            <a href="">
+              <button>Ver sitio</button>
+            </a>
+          </div>
+          <div class="extras__card">
+            <img src="/images/ecommerce.webp" />
+            <h5>E-commerce</h5>
+            <p>
+              Tienda online funcional y moderna para la venta de bicicletas
+              urbanas y accesorios. Pensada para recorrer con fluidez, comparar
+              productos y comprar sin trabas. Una web con velocidad propia.
+            </p>
+            <a href="">
+              <button>Ver sitio</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="campaign">
+        <div class="campaign__description">
+          <h5>Campaña <span class="color"> "Voces de la Salud" </span></h5>
+          <p>
+            Campaña publicitaria para Swiss Medical basada en un insight actual:
+            el exceso de voces sin fundamento al buscar información sobre salud.
+            Bajo el concepto “Voces de la Salud”, trabajamos comparaciones entre
+            creencias populares y diagnósticos reales, posicionando a Swiss como
+            la única voz experta en medio del ruido.
+          </p>
+        </div>
+        <img src="./images/ecommerce.webp" />
+      </section>
+    </main>
+    <footer>
+      <img class="footer_logo" src="./images/isoLogo.svg  " alt="isoLogo" />
+      <p>Copyright © 2025 Un Fla'</p>
+      <div class="social">
+        <img src="./images/instagram.svg" alt="iso Logo" />
+        <img src="./images/instagram.svg" alt="iso Logo" />
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
