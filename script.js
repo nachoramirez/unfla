@@ -90,7 +90,7 @@ const createOutside = () => {
 const openModal = (e) => {
   modal.classList.add('open')
   const element = e.target.src ? e.target : e.target.children[0]
-  if (element.alt == 'olmedo') {
+  if (element.alt == 'Estudio olmedo') {
     modal.children[0].innerHTML = `
     <iframe
     src="./images/manual-de-marca.pdf"
@@ -147,7 +147,7 @@ const images = [
   { src: './images/identity/Kung-fu-panda.webp', alt: 'kung fu panda' },
   { src: './images/identity/TLOU.webp', alt: 'the last of us' },
   { src: './images/identity/Monster.webp', alt: 'moster' },
-  { src: './images/identity/olmedo.jpg', alt: 'olmedo' },
+  { src: './images/identity/Estudio-Olmedo.webp', alt: 'Estudio olmedo' },
   { src: './images/identity/Kung-fu-panda.webp', alt: 'kung fu panda' },
   { src: './images/identity/TLOU.webp', alt: 'the last of us' },
 ]
@@ -196,7 +196,7 @@ cascadeAnimation(
     trigger: '.invitado',
     start: 'top center+=100',
   },
-  ['.invitado__texto', '.invitado__card'],
+  ['.invitado__texto', '.recorte6'],
   [{ x: 200 }, { scale: 0.2 }],
   [0, '-=0.5']
 )

@@ -2,13 +2,12 @@
   --detail-color: #e51d4d;
   --extra-color: #00f068;
   --background: rgb(20, 20, 20);
-  --background_dark: rgb(0, 0, 0);
-  --background_purple: rgb(0, 0, 30);
+  --background_dark: #0c0c0c;
   --dark-white: #d9d9d9;
   --light-grey: #7f7f7f;
   --grey: #2c2c2c;
   --white: #ffffff;
-  --presentation-duration: -5s;
+  --presentation-duration: 4.5s;
 }
 
 html {
@@ -125,43 +124,26 @@ section.presentation {
 header {
   position: sticky;
   margin: 50px auto 0 auto;
-  width: 80%;
+  width: 100%;
   height: 80px;
   top: 0;
   text-decoration: none;
   z-index: 8;
-  background: radial-gradient(
-    circle,
-    rgba(229, 29, 77, 0.9),
-    rgba(0, 0, 0, 0.5) 100%
-  );
+  background: radial-gradient(circle, rgba(229, 29, 77, 0.9), transparent 100%);
+  /* background-color: rgba(229, 29, 77, 0.5); */
   backdrop-filter: blur(10px);
-  padding: 5px 10%;
+  /* padding: 5px 10%; */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
 }
 
-header div {
-  display: flex;
-  justify-content: space-around;
-  width: clamp(400px, 35%, 500px);
-}
-
 header img {
   left: 5%;
   width: 215px;
   cursor: pointer;
-}
-
-header a {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-header article {
-  width: 215px;
+  filter: saturate(0) brightness(22);
 }
 
 a:-webkit-any-link {
@@ -247,13 +229,14 @@ h1 {
 }
 
 .participantes__background__title-container {
-  width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .participantes__background__title {
   margin: 0;
+  text-align: center;
 }
 
 /* scroller */
@@ -304,24 +287,31 @@ section.scroller__container {
 }
 
 .recorte {
-  background: url('./cards/BG_Card_Sina.jpg') no-repeat;
+  background: url('./images/cards/BG_Card_Sina.webp');
+  background-size: contain;
   border-radius: 12% 88% 73% 27% / 71% 53% 47% 29%;
 }
 .recorte2 {
   border-radius: 65% 35% 53% 47% / 48% 56% 44% 52%;
-  background: url('./cards/BG_Card_Emi.jpg') no-repeat;
+  background: url('./images/cards/BG_Card_Emi.webp') no-repeat;
 }
 .recorte3 {
-  background: url('./cards/BG_Card_Feli.jpg') no-repeat;
+  background: url('./images/cards/BG_Card_Feli.webp') no-repeat;
   border-radius: 88% 12% 77% 23% / 34% 83% 17% 66%;
 }
 .recorte4 {
   border-radius: 47% 53% 49% 51% / 56% 23% 77% 44%;
-  background: url('./cards/BG_Card_Viole.jpg') no-repeat;
+  background: url('./images/cards/BG_Card_Viole.webp') no-repeat;
 }
 .recorte5 {
-  background: url('./cards/BG_Card_Toto.jpg') no-repeat;
+  background: url('./images/cards/BG_Card_Toto.webp') no-repeat;
   border-radius: 29% 71% 12% 88% / 56% 23% 77% 44%;
+}
+
+.recorte6 {
+  background: url('./images/cards/BG_Card_Chatgpt.webp') no-repeat;
+  border-radius: 29% 71% 12% 88% / 56% 23% 77% 44%;
+  box-shadow: 0 0 70px 12px rgba(255, 255, 255, 0.1) inset;
 }
 
 .card__section {
@@ -426,6 +416,7 @@ section.skills {
 .skills_titles__details_logo {
   height: 50px;
   margin: 10px;
+  filter: saturate(0) brightness(2);
 }
 
 .skills_titles__details p {
@@ -671,16 +662,21 @@ section.skills {
 }
 
 .indentity__modal button {
+  background: none;
+  border: none;
   position: absolute;
   right: 20px;
   top: 10px;
+}
+.indentity__modal__img {
+  height: 50%;
 }
 
 .open {
   display: flex;
 }
 
-.indentity__modal__content__container{
+.indentity__modal__content__container {
   margin: 0 auto;
   height: 100%;
   width: 100%;
@@ -1028,15 +1024,16 @@ footer {
 
 .footer_logo {
   width: 10%;
-  height: 100%;
+  height: 80%;
+  filter: saturate(0) brightness(2);
 }
 
 footer p {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 20px;
-  font-size: 2rem;
+  bottom: 15%;
+  font-size: 1.7rem;
   font-weight: 300;
   text-wrap: nowrap;
 }

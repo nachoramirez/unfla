@@ -26,18 +26,13 @@
       </video>
     </section>
     <div class="indentity__modal">
-      <div class="indentity__modal__content__container">  
-      </div>
-      <button onclick="closeModal()">close</button>
+      <div class="indentity__modal__content__container"></div>
+      <button onclick="closeModal()">
+        <img class="indentity__modal__img" src="/utils/close.svg" alt="close" />
+      </button>
     </div>
     <header>
       <img src="./images/logo.svg" alt="logo" />
-      <div>
-        <a href="#welcome">Conocenos</a>
-        <a href="#scroller">Servicios</a>
-        <a href="#wall-e">Proyectos</a>
-      </div>
-      <article></article>
     </header>
     <main>
       <section class="welcome">
@@ -57,9 +52,7 @@
               <div class="participantes__background__title-container">
                 <h4 class="participantes__background__title">
                   Todo esto lo hicimos
-                </h4>
-                <h4 class="participantes__background__title color">
-                  entre cinco.
+                  <span class="color"> entre cinco. </span>
                 </h4>
               </div>
             </article>
@@ -68,7 +61,7 @@
             <aside>
               <div class="card recorte">
                 <img
-                  src="./cards/Sina_imgCard.png"
+                  src="./images/cards/Sina_imgCard.webp"
                   class="card__image"
                   alt="Sina"
                 />
@@ -86,7 +79,7 @@
             <aside>
               <div class="card recorte2">
                 <img
-                  src="./cards/Emi_imgCard.png"
+                  src="./images/cards/Emi_imgCard.webp"
                   class="card__image"
                   alt="Emi"
                 />
@@ -103,7 +96,10 @@
             </aside>
             <aside>
               <div class="card recorte3">
-                <img src="./cards/Feli_imgCard.png" class="card__image" />
+                <img
+                  src="./images/cards/Feli_imgCard.webp"
+                  class="card__image"
+                />
                 <div class="card__section">
                   <h4 class="card__title">Felipe Maquieira</h4>
                   <p class="card__text">
@@ -118,7 +114,7 @@
             <aside>
               <div class="card recorte4">
                 <img
-                  src="./cards/Viole_imgCard.png"
+                  src="./images/cards/Viole_imgCard.webp"
                   class="card__image"
                   alt="Viole"
                 />
@@ -136,7 +132,7 @@
             <aside>
               <div class="card recorte5">
                 <img
-                  src="./cards/Toto_imgCard.png"
+                  src="./images/cards/Toto_imgCard.webp"
                   class="card__image"
                   alt="Toto"
                 />
@@ -158,8 +154,8 @@
         <h4 class="invitado__texto">
           Bueno, en realidad <span class="color">entre 6...</span>
         </h4>
-        <div class="card invitado__card">
-          <img src="./cards/chadgpt.png" class="card__image" />
+        <div class="card recorte6">
+          <img src="./images/cards/Chatgpt_imgCard.webp" class="card__image" />
           <div class="card__section">
             <h4 class="card__title">CHAT GPT</h4>
             <h5 class="card__text invitado__sub">
@@ -277,7 +273,10 @@
             </div>
             <div class="indentity__card">
               <div class="indentity__card__glitch__container">
-                <img class="indentity__card__img" src="./images/identity/TLOU.webp" />
+                <img
+                  class="indentity__card__img"
+                  src="./images/identity/TLOU.webp"
+                />
                 <img class="indentity__card__image__glitch" />
                 <img class="indentity__card__image__glitch" />
                 <img class="indentity__card__image__glitch" />
@@ -456,17 +455,20 @@
           </p>
         </div>
         <video autoplay muted playsinline loop class="campaign__video">
-          <source src="./videos/3d/Teclado-3D.webm" type="video/webm" />
+          <source src="videos/3d/Teclado-3D.webm" type="video/webm" />
         </video>
       </section>
     </main>
     <footer>
       <img class="footer_logo" src="./images/isoLogo.svg  " alt="isoLogo" />
       <p>Copyright © 2025 Un Fla'</p>
-      <div class="social">
+      <a
+        target="_blank"
+        href="https://www.instagram.com/unfla_agencia?igsh=ZDBib25lZm9mYjJn"
+        class="social"
+      >
         <img src="./images/instagram.svg" alt="iso Logo" />
-        <img src="./images/instagram.svg" alt="iso Logo" />
-      </div>
+      </a>
     </footer>
     <script src="./script.js"></script>
   </body>
