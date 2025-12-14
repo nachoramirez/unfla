@@ -44,9 +44,26 @@ const horizontalScroller = () => {
   }
 }
 
+const carrouselContainer = document.querySelector('.skills__cards_carrousel')
+
+const swipeHandler = (element, right, left) => {
+  let start, end
+  element.addEventListener('touchstart', (e) => {
+    start = e.changedTouches[0].clientX
+  })
+  element.addEventListener('touchend', (e) => {
+    end = e.changedTouches[0].clientX
+    if (start > end) {
+      right()
+    }
+    if (start < end) {
+      left()
+    }
+  })
+}
+
 let carrouselHandler = (isRight) => {
-  let carrouselContainer = document.querySelector('.skills__cards_carrousel')
-  let element = document.querySelector('.skills__cards')
+  const element = document.querySelector('.skills__cards')
   let elementWIdth = element.getBoundingClientRect().width
   let margin = window.getComputedStyle(element).marginLeft
 
@@ -64,18 +81,16 @@ let toRight = () => {
 let toLeft = () => {
   carrouselHandler(false)
 }
+swipeHandler(carrouselContainer, toRight, toLeft)
 
 generateStars()
 horizontalScroller()
 
-const outsideClick = (e) => {
-  console.log(e.target)
-}
+
 
 const modal = document.querySelector('.indentity__modal')
 
 const handleOutside = (e) => {
-  console.log(e)
   const modalContent = document.querySelector('.indentity__modal__content')
   if (e.target != modalContent) {
     closeModal()
@@ -166,6 +181,12 @@ const identityOnLeft = () => {
   identityIndex--
   identityIndex = placeItems(identityIndex, images, '.indentity__card')
 }
+
+swipeHandler(
+  document.querySelector('.indentity__carrousel__container'),
+  identityOnRight,
+  identityOnLeft
+)
 
 document.addEventListener('DOMContentLoaded', (event) => {
   gsap.registerPlugin(SplitText)
