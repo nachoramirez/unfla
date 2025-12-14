@@ -68,16 +68,73 @@ let toLeft = () => {
 generateStars()
 horizontalScroller()
 
+const outsideClick = (e) => {
+  console.log(e.target)
+}
+
+const modal = document.querySelector('.indentity__modal')
+
+const handleOutside = (e) => {
+  console.log(e)
+  const modalContent = document.querySelector('.indentity__modal__content')
+  if (e.target != modalContent) {
+    closeModal()
+    modal.removeEventListener('click', handleOutside)
+  }
+}
+
+const createOutside = () => {
+  modal.addEventListener('click', handleOutside)
+}
+
+const openModal = (e) => {
+  modal.classList.add('open')
+  const element = e.target.src ? e.target : e.target.children[0]
+  if (element.alt == 'olmedo') {
+    modal.children[0].innerHTML = `
+    <iframe
+    src="./images/manual-de-marca.pdf"
+    width="80%"
+    height="80%"
+    style="border: none"
+    class="indentity__modal__content"
+    >
+    </iframe>`
+  } else {
+    modal.children[0].innerHTML = `
+    <img 
+    class="indentity__modal__content" 
+    src=${element.src} 
+    alt=${element.alt} 
+    >
+    `
+  }
+
+  gsap.from('.indentity__modal__content', {
+    opacity: 0,
+    scale: 0.5,
+    duration: 0.5,
+  })
+  createOutside()
+}
+
+const closeModal = () => {
+  modal.removeEventListener('click', handleOutside)
+  modal.classList.remove('open')
+}
+
 const placeItems = (index, images, query) => {
   const carrousel = document.querySelectorAll(query)
   let currentIndex = index % (images.length - 2) || 0
 
   carrousel.forEach((element, index) => {
+    element.children[0].addEventListener('click', openModal)
     const container = element.children[0].children
     element.style.transform = 'scale(1.1)'
     setTimeout(() => {
       for (let i = 0; i < container.length; i++) {
-        container[i].src = images[index + currentIndex]
+        container[i].src = images[index + currentIndex].src
+        container[i].alt = images[index + currentIndex].alt
       }
       element.style.transform = 'scale(1)'
     }, 100)
@@ -87,13 +144,12 @@ const placeItems = (index, images, query) => {
 }
 
 const images = [
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ58l8qJHkSvuxuD5-_a84Eev_0WIrpZKU9EA&s',
-  './tlou.jpg',
-  'https://www.originalfilmart.com/cdn/shop/products/KungFuPanda_2008_teaser_original_film_art_5000x.webp?v=1678484028',
-  'https://i5.walmartimages.com/seo/Red-Dead-Redemption-2-Vedio-Game-Poster-and-Prints-Unframed-Wall-Art-Gifts-Decor-12-x-18-inch-30cm-x-46cm_3e60832e-babb-495b-8133-fb01a92092a7.abc48332075e6c8a8c190b8ce056b9f3.jpeg',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3MeGyB86AkHf17ORknVpu_Nc7pI94aNVXhg&s',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ58l8qJHkSvuxuD5-_a84Eev_0WIrpZKU9EA&s',
-  './tlou.jpg',
+  { src: './images/identity/Kung-fu-panda.webp', alt: 'kung fu panda' },
+  { src: './images/identity/TLOU.webp', alt: 'the last of us' },
+  { src: './images/identity/Monster.webp', alt: 'moster' },
+  { src: './images/identity/olmedo.jpg', alt: 'olmedo' },
+  { src: './images/identity/Kung-fu-panda.webp', alt: 'kung fu panda' },
+  { src: './images/identity/TLOU.webp', alt: 'the last of us' },
 ]
 
 let identityIndex = 0
@@ -115,8 +171,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   gsap.registerPlugin(SplitText)
   gsap.registerPlugin(ScrollTrigger)
 })
-gsap.registerPlugin(SplitText)
-gsap.registerPlugin(ScrollTrigger)
 
 const cascadeAnimation = (parent, elements, animations, delay) => {
   const timeLine = gsap.timeline({
@@ -124,7 +178,6 @@ const cascadeAnimation = (parent, elements, animations, delay) => {
       trigger: '.main',
       toggleActions: 'play none none none',
       start: 'top center',
-      // markers: true,
       ...parent,
     },
   })
@@ -235,39 +288,36 @@ const prev = document.querySelector('#graphics-left')
 const next = document.querySelector('#graphics-right')
 let currentIndex = 0
 
-slides.forEach(
-  (slide, i) => {
-    slide.classList.add('graphics__carrousel__card-abs')
-    gsap.set(slide.children, { opacity: i === 0 ? 1 : 0 })
-    const video = slide.children[0].children[0]
-    video.volume = 0.05
-    gsap.to(video, {
-      scrollTrigger: {
-        trigger: video,
-        // markers: true,
-        start: 'top bottom-=200',
-        end: 'bottom top+=100',
-        onEnter: () => {
-          if (i === currentIndex) {
-            video.play()
-          }
-          slide.children[0].children[0].muted = false
-        },
-        onLeave: () => {
-          video.pause()
-        },
-        onEnterBack: () => {
-          if (i === currentIndex) {
-            video.play()
-          }
-        },
-        onLeaveBack: () => {
-          video.pause()
-        },
+slides.forEach((slide, i) => {
+  slide.classList.add('graphics__carrousel__card-abs')
+  gsap.set(slide.children, { opacity: i === 0 ? 1 : 0 })
+  const video = slide.children[0].children[0]
+  video.volume = 0.05
+  gsap.to(video, {
+    scrollTrigger: {
+      trigger: video,
+      start: 'top bottom-=200',
+      end: 'bottom top+=100',
+      onEnter: () => {
+        if (i === currentIndex) {
+          video.play()
+        }
+        slide.children[0].children[0].muted = false
       },
-    })
-  }
-)
+      onLeave: () => {
+        video.pause()
+      },
+      onEnterBack: () => {
+        if (i === currentIndex) {
+          video.play()
+        }
+      },
+      onLeaveBack: () => {
+        video.pause()
+      },
+    },
+  })
+})
 
 next.addEventListener('click', () => changeSlide(1))
 prev.addEventListener('click', () => changeSlide(-1))

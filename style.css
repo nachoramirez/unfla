@@ -12,6 +12,7 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
   font-size: 16px;
 }
@@ -137,7 +138,7 @@ header {
   backdrop-filter: blur(10px);
   padding: 5px 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: 50px;
 }
@@ -658,6 +659,40 @@ section.skills {
   text-align: center;
 }
 
+.indentity__modal {
+  top: 0;
+  left: 0;
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.indentity__modal button {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.open {
+  display: flex;
+}
+
+.indentity__modal__content__container{
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indentity__modal__content__container img {
+  height: 80%;
+}
+
 section.graphics {
   display: grid;
   width: 100%;
@@ -905,6 +940,7 @@ section.graphics {
 }
 
 .extras__card img {
+  min-height: 200px;
   height: clamp(100px, 20vw, 150px);
 }
 
