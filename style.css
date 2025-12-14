@@ -7,7 +7,7 @@
   --light-grey: #7f7f7f;
   --grey: #2c2c2c;
   --white: #ffffff;
-  --presentation-duration: 4.5s;
+  --presentation-duration: -4.5s;
 }
 
 html {
@@ -832,7 +832,8 @@ section.graphics {
 
 .model3d {
   transform: rotate(-10deg);
-  height: clamp(300px, 50vh, 800px);
+  height: auto;
+  width: clamp(100px, 100vw, 750px);
   background: transparent;
   border-radius: 3rem;
   display: flex;
@@ -936,7 +937,9 @@ section.graphics {
 }
 
 .extras__card img {
-  min-height: 200px;
+  /* min-height: 200px; */
+  max-width: 100%;
+  object-fit: contain;
   height: clamp(100px, 20vw, 150px);
 }
 
@@ -945,6 +948,7 @@ section.graphics {
 }
 
 .extras__card p {
+  place-self: end;
   font-size: 1.3rem;
   text-align: left;
   text-wrap: pretty;
@@ -1054,11 +1058,108 @@ footer p {
   opacity: 0;
 } */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
   html {
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 1100px) {
+  .skills__cards {
+    width: calc(400px - 50px);
+    padding: 20px 50px;
+    height: calc(350px - 20px);
+  }
+
+  .indentity__titles__container {
+    width: 70%;
+  }
+
+  .graphics__carrousel__card__content {
+    width: 80%;
+  }
+
+  .model3d {
+    height: auto;
+    width: 90%;
+  }
+
+  .extras__cards__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .extras__card {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    align-items: stretch;
+  }
+
+  .extras__card div {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+  }
+
+  .extras__card p {
+    place-self: start;
+    width: 60%;
+    margin-bottom: 100px;
+  }
+
+  .extras__card a {
+    display: flex;
+    justify-content: end;
+  }
+
+  .extras__card button {
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  .campaign {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  .campaign__description {
+    width: 80%;
+  }
+
+  .campaign__video {
+    margin-top: 100px;
+    width: 80%;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .card {
+    max-height: none;
+    height: 45%;
+    display: flex;
+    align-items: center;
+  }
+  .card__image {
+    bottom: 50%;
+    transform: translateY(50%);
+    height: auto;
+    width: 50%;
+    mask-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .recorte6 {
+    height: 40vh;
+  }
+}
+
 @media screen and (max-width: 768px) {
   html {
     font-size: 12px;

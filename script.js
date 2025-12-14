@@ -281,6 +281,20 @@ container3d.forEach((element) => {
     innerX(0)
     innerY(0)
   })
+  
+  element.addEventListener('touchmove', (e) => {
+    outerRX(gsap.utils.interpolate(short, -short, e.touches[0].clientY / window.innerHeight))
+    outerRY(gsap.utils.interpolate(-short, short, e.touches[0].clientX / window.innerWidth))
+    innerX(gsap.utils.interpolate(-long, long, e.touches[0].clientX / window.innerWidth))
+    innerY(gsap.utils.interpolate(-long, long, e.touches[0].clientY / window.innerHeight))
+  })
+
+  element.addEventListener('touchend', (e) => {
+    outerRX(0)
+    outerRY(0)
+    innerX(0)
+    innerY(0)
+  })
 })
 
 const slides = gsap.utils.toArray('.graphics__carrousel__card')
