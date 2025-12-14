@@ -351,7 +351,7 @@ section.scroller__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .invitado__texto {
@@ -694,6 +694,7 @@ section.graphics {
   width: 100%;
   max-width: 1920px;
   grid-template-columns: repeat(12, 1fr);
+  grid-gap: 50px;
   margin: 90px 0;
 }
 
@@ -745,10 +746,6 @@ section.graphics {
   align-items: center;
   position: relative;
   height: 600px;
-  gap: 10px;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
 }
 
 .graphics__carrousel__card {
@@ -1065,14 +1062,29 @@ footer p {
 }
 
 @media screen and (max-width: 1100px) {
+  .skills {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .skills__cards {
     width: calc(400px - 50px);
     padding: 20px 50px;
     height: calc(350px - 20px);
   }
 
+  .indentity {
+    justify-content: center;
+    min-height: 70vh;
+  }
+
   .indentity__titles__container {
-    width: 70%;
+    width: 80%;
+  }
+
+  .graphics {
+    min-height: 70vh;
   }
 
   .graphics__carrousel__card__content {
@@ -1081,7 +1093,7 @@ footer p {
 
   .model3d {
     height: auto;
-    width: 90%;
+    width: 100%;
   }
 
   .extras__cards__container {
@@ -1121,11 +1133,15 @@ footer p {
     margin-right: 20px;
   }
 
-  .campaign {
+  section.campaign {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: auto;
+    padding: 200px 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
   }
   .campaign__description {
     width: 80%;
