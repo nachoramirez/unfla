@@ -37,8 +37,7 @@ const horizontalScroller = () => {
       let verticalScrollHeight =
         scrollerContainer.getBoundingClientRect().height -
         sticky.getBoundingClientRect().height
-      sticky.scrollLeft =
-        (scrollWidth / verticalScrollHeight) * -scrolled * 0.85
+      sticky.scrollLeft = (scrollWidth / verticalScrollHeight) * -scrolled * 0.8
       scrollerBackground.style.transform = `translateX(${sticky.scrollLeft}px)`
     }
   }
@@ -81,12 +80,11 @@ let toRight = () => {
 let toLeft = () => {
   carrouselHandler(false)
 }
+
 swipeHandler(carrouselContainer, toRight, toLeft)
 
 generateStars()
 horizontalScroller()
-
-
 
 const modal = document.querySelector('.indentity__modal')
 
@@ -366,6 +364,12 @@ slides.forEach((slide, i) => {
 
 next.addEventListener('click', () => changeSlide(1))
 prev.addEventListener('click', () => changeSlide(-1))
+
+swipeHandler(
+  document.querySelector('.graphics__carrousel'),
+  () => changeSlide(1),
+  () => changeSlide(-1)
+)
 
 function changeSlide(dir) {
   const oldLayers = slides[currentIndex].children
