@@ -1,6 +1,6 @@
 @keyframes waitpresentation {
   from {
-    height: 0;
+    height: 80vh;
     overflow: hidden;
   }
   to {

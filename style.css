@@ -7,13 +7,13 @@
   --light-grey: #7f7f7f;
   --grey: #2c2c2c;
   --white: #ffffff;
-  --presentation-duration: -4.5s;
+  --presentation-duration: 4.5s;
 }
 
 html {
   overflow-x: clip;
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 img {
@@ -22,6 +22,7 @@ img {
 
 h4 {
   font-size: 3rem;
+  font-weight: 600;
 }
 
 h5 {
@@ -51,7 +52,7 @@ section {
 }
 
 .bold {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 button {
@@ -109,6 +110,7 @@ section.presentation {
   max-width: none;
   width: auto;
   height: 100vh;
+  width: 100vw;
   z-index: 10;
   background-color: var(--background);
   animation: presentation-animation 1s linear var(--presentation-duration)
@@ -121,6 +123,7 @@ section.presentation {
 .presentation video {
   width: 100%;
   aspect-ratio: 16/9;
+  max-width: 1920px;
 }
 
 /* header */
@@ -141,6 +144,13 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
+}
+
+header a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
 }
 
 header img {
@@ -285,7 +295,6 @@ section.scroller__container {
   max-width: 900px;
   max-height: 400px;
   position: relative;
-  background-size: cover;
   margin: 150px 50px 0 50px;
   overflow: hidden;
   box-shadow: 0 0 30px 12px rgba(0, 0, 0, 0.6) inset;
@@ -294,23 +303,22 @@ section.scroller__container {
 
 .recorte {
   background: url('./images/cards/BG_Card_Sina.webp');
-  background-size: contain;
   border-radius: 15% 85% 54% 15% / 54% 61% 36% 46%;
 }
 .recorte2 {
   border-radius: 65% 35% 53% 47% / 35% 56% 44% 50%;
-  background: url('./images/cards/BG_Card_Emi.webp') no-repeat;
+  background: url('./images/cards/BG_Card_Emi.webp');
 }
 .recorte3 {
-  background: url('./images/cards/BG_Card_Feli.webp') no-repeat;
+  background: url('./images/cards/BG_Card_Feli.webp');
   border-radius: 88% 12% 77% 23% / 34% 83% 17% 66%;
 }
 .recorte4 {
   border-radius: 66% 33% 26% 66% / 45% 45% 43% 55%;
-  background: url('./images/cards/BG_Card_Viole.webp') no-repeat;
+  background: url('./images/cards/BG_Card_Viole.webp');
 }
 .recorte5 {
-  background: url('./images/cards/BG_Card_Toto.webp') no-repeat;
+  background: url('./images/cards/BG_Card_Toto.webp');
   border-radius: 29% 71% 12% 88% / 56% 23% 77% 44%;
 }
 
@@ -334,7 +342,7 @@ section.scroller__container {
 .card__text {
   width: 70%;
   margin: 0;
-
+  font-weight: 200;
   line-height: 2rem;
   font-size: 1.25rem;
 }
@@ -356,7 +364,6 @@ section.scroller__container {
 
 .invitado {
   width: 80%;
-  margin: 50px auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -365,7 +372,6 @@ section.scroller__container {
 
 .invitado__texto {
   align-self: flex-end;
-  font-size: 4rem;
   margin: 0;
   text-align: right;
 }
@@ -377,8 +383,9 @@ section.scroller__container {
 }
 
 .invitado__sub {
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 
 /* 
@@ -510,21 +517,21 @@ section.skills {
 }
 
 .skills__cards__number {
-  margin: 0 0 20px 0;
+  margin: 0 0 50px 0;
   font-size: 6rem;
   font-weight: 400;
 }
 
 .skills__cards__title {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: var(--detail-color);
 }
 
 .skills__cards__text {
   font-size: 1.5rem;
-  line-height: 1.7rem;
+  line-height: 2rem;
   font-weight: 300;
   margin: 5px 0;
 }
@@ -534,9 +541,10 @@ section.skills {
 .indentity {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: calc(100% - 100px);
   border-radius: 40%;
-  padding: 50px;
+  padding: 200px 50px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.85) 0%,
@@ -565,7 +573,7 @@ section.skills {
 }
 
 .indentity__carrousel__container {
-  width: 100%;
+  width: 80%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -577,11 +585,11 @@ section.skills {
   width: 60px;
   height: 55px;
   top: 50%;
-  left: 0;
+  left: -20px;
 }
 
 .right__button {
-  right: 0;
+  right: -20px;
   left: auto;
 }
 
@@ -715,7 +723,6 @@ section.graphics {
 
 .graphics__title {
   font-size: 2.8rem;
-  font-weight: 400;
   max-width: 700px;
   width: 50%;
   line-height: 3rem;
@@ -805,7 +812,6 @@ section.graphics {
 }
 
 .model3d__title {
-  color: var(--detail-color);
   margin: 20px;
 }
 
@@ -814,7 +820,7 @@ section.graphics {
   max-width: 800px;
   text-wrap: balance;
   hyphens: manual;
-  font-weight: 400;
+  font-weight: 200;
   margin: 0 0 90px 0;
 }
 
@@ -999,20 +1005,33 @@ section.graphics {
 }
 
 .campaign__description h5 {
+  line-height: 3rem;
   text-align: center;
   font-size: 3rem;
   margin: 0;
 }
 
 .campaign__description p {
-  font-weight: 400;
-  font-size: 1.9rem;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
   text-wrap: pretty;
   hyphens: manual;
 }
 
 .campaign__video {
+  border-radius: 14px;
   width: 40%;
+}
+
+.fliped {
+  border-radius: 66% 34% 34% 66% / 52% 46% 45% 48%;
+  background: radial-gradient(
+    65% 90% at 49% 93%,
+    var(--detail-color) 0%,
+    #121416 100%
+  );
 }
 
 footer {
@@ -1043,7 +1062,7 @@ footer p {
   left: 50%;
   transform: translate(-50%);
   bottom: 15%;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 300;
   text-wrap: nowrap;
 }
@@ -1060,13 +1079,9 @@ footer p {
   height: 80%;
 }
 
-/* .second {
-  opacity: 0;
-} */
-
 @media screen and (max-width: 1300px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .skills {
@@ -1176,11 +1191,13 @@ footer p {
 
   header {
     height: 150px;
+    max-height: 10vh;
   }
 
   header img {
     width: auto;
     height: 60%;
+    max-height: 100px;
   }
 
   .participantes__background {
@@ -1234,7 +1251,7 @@ footer p {
 
   .skills__cards {
     width: 400px;
-    padding: 20px 50px;
+    padding: 50px;
     height: auto;
   }
 
@@ -1283,7 +1300,7 @@ footer p {
     max-width: 200px;
   }
 
-  .model3d__subtitle{
+  .model3d__subtitle {
     font-size: 1.8rem;
     max-width: none;
   }
@@ -1299,6 +1316,7 @@ footer p {
 
   .campaign {
     text-align: center;
+    border-radius: 57% 43% 23% 42% / 34% 37% 50% 51%;
   }
 }
 

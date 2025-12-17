@@ -275,6 +275,59 @@ cascadeAnimation(
   [0, '-=1.2', '-=0.5', '-=0.5', '-=0.5']
 )
 
+const campaignVideoOne = document.getElementById('campaign1').children[1]
+cascadeAnimation(
+  {
+    trigger: '#campaign1',
+    start: 'top top+=300',
+    end: 'center top+=100',
+    onEnter: (e) => {
+      campaignVideoOne.play()
+      campaignVideoOne.muted = false
+    },
+    onLeave: () => {
+      campaignVideoOne.pause()
+    },
+    onEnterBack: () => {
+      campaignVideoOne.play()
+    },
+    onLeaveBack: () => {
+      campaignVideoOne.pause()
+    },
+  },
+  ['#campaign1'],
+  [{ y: 200 }],
+  [0]
+)
+const campaignVideoTwo = document.getElementById('campaign2').children[0]
+cascadeAnimation(
+  {
+    trigger: '#campaign2',
+    start: 'top top+=300',
+
+    end: 'bottom-=200 top+=100',
+    onEnter: (e) => {
+      campaignVideoTwo.play()
+      campaignVideoTwo.muted = false
+    },
+    onLeave: () => {
+      campaignVideoTwo.pause()
+    },
+    onEnterBack: () => {
+      campaignVideoTwo.play()
+    },
+    onLeaveBack: () => {
+      campaignVideoTwo.pause()
+    },
+  },
+  ['#campaign2'],
+  [{ y: 200 }],
+  [0]
+)
+
+campaignVideoOne.volume = 0.05
+campaignVideoTwo.volume = 0.05
+
 const container3d = document.querySelectorAll('.model3d__container')
 
 gsap.set('.model3d__container', { perspective: 900 })

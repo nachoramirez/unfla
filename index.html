@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
 
-    <title>Un fla'</title>
+    <title>Un Fla'</title>
     <link rel="shortcut icon" href="images/image.png" type="image/x-png" />
   </head>
   <body>
@@ -32,17 +32,19 @@
       </button>
     </div>
     <header>
-      <img src="./images/logo.svg" alt="logo" />
+      <a href="#start">
+        <img src="./images/logo.svg" alt="logo" />
+      </a>
     </header>
     <main>
-      <section class="welcome">
+      <section class="welcome" id="start">
         <h1>NOS METEMOS</h1>
         <h1>DONDE NADIE SE ANIMA</h1>
         <h3>
           Buscando lo que sorprende lo que descoloca, lo que hace flashear
         </h3>
         <a href="#scroller">
-          <button>Y vos, ¿Te animas?</button>
+          <button>Y vos, ¿te animas?</button>
         </a>
       </section>
       <section id="scroller" class="scroller__container">
@@ -52,7 +54,7 @@
               <div class="participantes__background__title-container">
                 <h4 class="participantes__background__title">
                   Todo esto lo hicimos
-                  <span class="color"> entre cinco. </span>
+                  <span class="color bold"> ENTRE CINCO. </span>
                 </h4>
               </div>
             </article>
@@ -61,6 +63,7 @@
             <aside>
               <div class="card recorte">
                 <img
+                  loading="lazy"
                   src="./images/cards/Sina_imgCard.webp"
                   class="card__image"
                   alt="Sina"
@@ -81,6 +84,7 @@
             <aside>
               <div class="card recorte2">
                 <img
+                  loading="lazy"
                   src="./images/cards/Emi_imgCard.webp"
                   class="card__image"
                   alt="Emi"
@@ -101,6 +105,7 @@
             <aside>
               <div class="card recorte3">
                 <img
+                  loading="lazy"
                   src="./images/cards/Feli_imgCard.webp"
                   class="card__image"
                 />
@@ -120,6 +125,7 @@
             <aside>
               <div class="card recorte4">
                 <img
+                  loading="lazy"
                   src="./images/cards/Viole_imgCard.webp"
                   class="card__image"
                   alt="Viole"
@@ -140,6 +146,7 @@
             <aside>
               <div class="card recorte5">
                 <img
+                  loading="lazy"
                   src="./images/cards/Toto_imgCard.webp"
                   class="card__image"
                   alt="Toto"
@@ -162,10 +169,14 @@
       </section>
       <section class="invitado">
         <h4 class="invitado__texto">
-          Bueno, en realidad <span class="color">entre 6...</span>
+          Bueno, en realidad <span class="color bold">ENTRE 6...</span>
         </h4>
         <div class="card recorte6">
-          <img src="./images/cards/Chatgpt_imgCard.webp" class="card__image" />
+          <img
+            loading="lazy"
+            src="./images/cards/Chatgpt_imgCard.webp"
+            class="card__image"
+          />
           <div class="card__section">
             <h4 class="card__title">CHAT GPT</h4>
             <h5 class="card__text invitado__sub">
@@ -212,6 +223,14 @@
             <div class="skills__cards_carrousel">
               <div class="skills__cards">
                 <h5 class="skills__cards__number">01</h5>
+                <h6 class="skills__cards__title">BRANDING</h6>
+                <p class="skills__cards__text">
+                  Creamos marcas con voz, forma, actitud y contexto. Que se
+                  vean, se sientan y sobre todo, se recuerden.
+                </p>
+              </div>
+              <div class="skills__cards">
+                <h5 class="skills__cards__number">02</h5>
                 <h6 class="skills__cards__title">MOTION DESIGN</h6>
                 <p class="skills__cards__text">
                   Hacemos que los conceptos respiren. Animamos con intención,
@@ -219,27 +238,19 @@
                 </p>
               </div>
               <div class="skills__cards">
-                <h5 class="skills__cards__number">02</h5>
-                <h6 class="skills__cards__title">DISEÑO WEB</h6>
-                <p class="skills__cards__text">
-                  Diseñamos webs que no repiten fórmulas. Claras, pensadas, y
-                  con identidad propia desde el código hasta el color.
-                </p>
-              </div>
-              <div class="skills__cards">
                 <h5 class="skills__cards__number">03</h5>
-                <h6 class="skills__cards__title">BRANDING</h6>
-                <p class="skills__cards__text">
-                  Creamos marcas con voz, forma, actitud y contexto.Que se vean,
-                  se sientan y sobre todo, se recuerden.
-                </p>
-              </div>
-              <div class="skills__cards">
-                <h5 class="skills__cards__number">04</h5>
                 <h6 class="skills__cards__title">ANIMACIÓN 3D</h6>
                 <p class="skills__cards__text">
                   Damos volumen a lo que no existe. Modelamos, texturizamos y
                   animamos ideas que no piden permiso.
+                </p>
+              </div>
+              <div class="skills__cards">
+                <h5 class="skills__cards__number">04</h5>
+                <h6 class="skills__cards__title">DISEÑO WEB</h6>
+                <p class="skills__cards__text">
+                  Diseñamos webs que no repiten fórmulas. Claras, pensadas, y
+                  con identidad propia desde el código hasta el color.
                 </p>
               </div>
               <div class="skills__cards">
@@ -257,7 +268,9 @@
       <section class="indentity">
         <div class="indentity__titles__container">
           <h4>
-            Identidad visual, ilustraciones y montajes que no se quedan en lo
+            <span class="color bold"> IDENTIDAD VISUAL</span>,
+            <span class="color bold"> ILUSTRACIONES </span> y
+            <span class="color bold"> MONTAJES </span> que no se quedan en lo
             básico
           </h4>
           <h5>Todo esto arranca con una idea, pero no termina ahí.</h5>
@@ -310,7 +323,8 @@
       <section class="graphics">
         <div class="graphics__titles">
           <h4 class="graphics__title">
-            <span class="bold"> MOTION GRAPHICS</span> hechos para sentirse, no solo verse
+            <span class="color bold"> MOTION GRAPHICS</span> hechos para
+            sentirse, no solo verse
           </h4>
           <div class="buttons__container">
             <button id="graphics-left">
@@ -336,6 +350,8 @@
                   muted
                   controls
                   class="motions"
+                  preload="none"
+                  poster="videos/motions/adobePoster.webp"
                 >
                   <source src="./videos/motions/Adobe.webm" type="video/webm" />
                 </video>
@@ -343,19 +359,19 @@
             </div>
             <div class="graphics__carrousel__card">
               <div class="graphics__carrousel__card__content">
-                <video controls loop class="motions">
+                <video preload="none" controls loop class="motions">
                   <source src="./videos/motions/Auto.webm" type="video/webm" />
                 </video>
               </div>
             </div>
-            <div class="graphics__carrousel__card">
+            <div preload="none" class="graphics__carrousel__card">
               <div class="graphics__carrousel__card__content">
                 <video controls loop class="motions">
                   <source src="./videos/motions/Fanta.webm" type="video/webm" />
                 </video>
               </div>
             </div>
-            <div class="graphics__carrousel__card">
+            <div preload="none" class="graphics__carrousel__card">
               <div class="graphics__carrousel__card__content">
                 <video controls loop class="motions">
                   <source
@@ -369,7 +385,9 @@
         </div>
       </section>
       <section class="models3d">
-        <h4 class="model3d__title"><span class="bold"> MODELAMOS EN 3D</span> lo que imaginamos</h4>
+        <h4 class="model3d__title">
+          <span class="color bold"> MODELAMOS EN 3D</span> lo que imaginamos
+        </h4>
         <h5 class="model3d__subtitle">
           No hacemos 3D para mostrar objetos. Lo hacemos para que la idea tenga
           peso, forma y presencia.
@@ -379,7 +397,7 @@
             <video autoplay muted playsinline loop class="model3d__video">
               <source src="./videos/3d/WallE-3D.webm" type="video/webm" />
             </video>
-            <h5 class="model3d__name">wall-e</h5>
+            <h5 class="model3d__name">Wall-E</h5>
           </div>
         </div>
         <div class="model3d__container">
@@ -387,7 +405,7 @@
             <video autoplay muted playsinline loop class="model3d__video">
               <source src="./videos/3d/Tri-3D.webm" type="video/webm" />
             </video>
-            <h5 class="model3d__name">Tri</h5>
+            <h5 class="model3d__name">Triceratops</h5>
           </div>
         </div>
         <div class="model3d__container">
@@ -395,7 +413,7 @@
             <video autoplay muted playsinline loop class="model3d__video">
               <source src="./videos/3d/D.V.A-3D.webm" type="video/webm" />
             </video>
-            <h5 class="model3d__name">D.V.A</h5>
+            <h5 class="model3d__name">D.Va</h5>
           </div>
         </div>
         <div class="model3d__container">
@@ -403,20 +421,33 @@
             <video autoplay muted playsinline loop class="model3d__video">
               <source src="./videos/3d/Teclado-3D.webm" type="video/webm" />
             </video>
-            <h5 class="model3d__name">Teclado</h5>
+            <h5 class="model3d__name">MIDI</h5>
+          </div>
+        </div>
+        <div class="model3d__container">
+          <div class="model3d" id="model5">
+            <video autoplay muted playsinline loop class="model3d__video">
+              <source src="./videos/3d/Teclado-3D.webm" type="video/webm" />
+            </video>
+            <h5 class="model3d__name">Teléfono</h5>
           </div>
         </div>
       </section>
       <section class="extras">
         <div class="extras__background"></div>
         <h4 class="extras__title">
-          Sitios que <span class="extra"> se animan </span> a algo más
+          <span class="bold extra">SITIOS</span> que
+          <span class="extra bold"> SE ANIMAN </span> a algo más
         </h4>
         <div class="extras__cards__container">
           <div class="extras__card">
             <div>
-              <img src="/images/corpo.webp" alt="coporative site" />
-              <h5>Corporativa</h5>
+              <img
+                src="/images/corpo.webp"
+                loading="lazy"
+                alt="coporative site"
+              />
+              <h5>CORPORATIVA</h5>
             </div>
             <p>
               Sitio institucional para un restaurante BBQ, con estética sobria y
@@ -424,14 +455,18 @@
               importante: buena comida y buena atención. Perfecta para conocer
               el lugar antes de probarlo.
             </p>
-            <a href="">
+            <a href="http://bbqrestaurant.unfla.com.ar/ " target="_blank">
               <button>Ver sitio</button>
             </a>
           </div>
           <div class="extras__card">
             <div>
-              <img src="/images/landing.webp" alt="landing page" />
-              <h5>Landing</h5>
+              <img
+                src="/images/landing.webp"
+                loading="lazy"
+                alt="landing page"
+              />
+              <h5>LANDING</h5>
             </div>
             <p>
               Sitio one-page para un restaurante BBQ con estética limpia y
@@ -439,29 +474,77 @@
               scroll: colores intensos, tipografía fuerte y navegación clara
               para destacar menús, horarios y reservas
             </p>
-            <a href="">
+
+            <a href="http://cafetto.unfla.com.ar/" target="_blank">
               <button>Ver sitio</button>
             </a>
           </div>
           <div class="extras__card">
             <div>
-              <img src="/images/ecommerce.webp" alt="ecommerce" />
-              <h5>E-commerce</h5>
+              <img
+                src="/images/ecommerce.webp"
+                loading="lazy"
+                alt="ecommerce"
+              />
+              <h5>E-COMMERCE</h5>
             </div>
             <p>
               Tienda online funcional y moderna para la venta de bicicletas
               urbanas y accesorios. Pensada para recorrer con fluidez, comparar
               productos y comprar sin trabas. Una web con velocidad propia.
             </p>
-            <a href="">
+            <a href="http://fullbike.unfla.com.ar" target="_blank">
               <button>Ver sitio</button>
             </a>
           </div>
         </div>
       </section>
-      <section class="campaign">
+      <section class="campaign" id="campaign1">
         <div class="campaign__description">
-          <h5>Campaña <span class="color"> "Voces de la Salud" </span></h5>
+          <h5>CAMPAÑA</h5>
+          <h5 class="color">"Debutá cuando se te cante"</h5>
+          <p>
+            Campaña desarrollada para Tulipán con el objetivo de cuestionar la
+            presión social que muchos adolescentes sienten al momento de
+            “debutar”. Bajo un enfoque directo y sin vueltas, propusimos un
+            mensaje que invite a frenar los mandatos y priorizar el deseo
+            propio. “Debutá cuando se te cante” busca visibilizar lo que muchas
+            veces se piensa en silencio, y decirlo en voz alta. La campaña fue
+            presentada en los Premios Obrar 2024, donde fue reconocida con el
+            Plata en la categoría Estudiantes
+          </p>
+        </div>
+        <video
+          preload="none"
+          muted
+          playsinline
+          controls
+          class="campaign__video"
+          poster="videos/campains/TulipanPoster.webp"
+        >
+          <source
+            src="videos/campains/Debuta-cuando-se-te-cante.webm"
+            type="video/webm"
+          />
+        </video>
+      </section>
+      <section class="campaign fliped" id="campaign2">
+        <video
+          preload="none"
+          muted
+          playsinline
+          controls
+          class="campaign__video"
+          poster="videos/campains/SwissMedicalPoster.webp"
+        >
+          <source
+            src="videos/campains/Publicitaria-Swiss-Medical.webm"
+            type="video/webm"
+          />
+        </video>
+        <div class="campaign__description">
+          <h5>CAMPAÑA</h5>
+          <h5 class="extra">"Voces de la Salud"</h5>
           <p>
             Campaña publicitaria para Swiss Medical basada en un insight actual:
             el exceso de voces sin fundamento al buscar información sobre salud.
@@ -470,9 +553,6 @@
             la única voz experta en medio del ruido.
           </p>
         </div>
-        <video autoplay muted playsinline loop class="campaign__video">
-          <source src="videos/3d/Teclado-3D.webm" type="video/webm" />
-        </video>
       </section>
     </main>
     <footer>
