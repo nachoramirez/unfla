@@ -160,6 +160,7 @@ const images = [
   { src: './images/identity/Kung-fu-panda.webp', alt: 'kung fu panda' },
   { src: './images/identity/TLOU.webp', alt: 'the last of us' },
   { src: './images/identity/Monster.webp', alt: 'moster' },
+  { src: './images/identity/Poker.webp', alt: 'poker' },
   { src: './images/identity/Estudio-Olmedo.webp', alt: 'Estudio olmedo' },
   { src: './images/identity/Kung-fu-panda.webp', alt: 'kung fu panda' },
   { src: './images/identity/TLOU.webp', alt: 'the last of us' },
@@ -279,7 +280,7 @@ const campaignVideoOne = document.getElementById('campaign1').children[1]
 cascadeAnimation(
   {
     trigger: '#campaign1',
-    start: 'top top+=300',
+    start: 'top center',
     end: 'center top+=100',
     onEnter: (e) => {
       campaignVideoOne.play()
@@ -303,7 +304,7 @@ const campaignVideoTwo = document.getElementById('campaign2').children[0]
 cascadeAnimation(
   {
     trigger: '#campaign2',
-    start: 'top top+=300',
+    start: 'top center',
 
     end: 'bottom-=200 top+=100',
     onEnter: (e) => {
